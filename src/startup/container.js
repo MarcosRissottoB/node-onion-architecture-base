@@ -16,6 +16,9 @@ const { HomeController } = require('../controllers');
 // Services
 const { HomeService } = require('../services');
 
+// Models
+const { User } = require('../models');
+
 const container =  createContainer();
 
 container
@@ -32,6 +35,9 @@ container
     })
     .register({
         HomeRoutes: asFunction(HomeRoutes).singleton()
+    })
+    .register({
+        User: asValue(User)
     })
 
 module.exports = container;
