@@ -14,6 +14,7 @@ const { HomeRoutes } = require('../routes/index.routes');
 const { HomeController } = require('../controllers');
 
 // Services
+const { HomeService, UserService } = require('../services');
 
 // Models
 const { User } = require('../models');
