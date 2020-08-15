@@ -19,6 +19,9 @@ const { HomeService } = require('../services');
 // Models
 const { User } = require('../models');
 
+// Repositories
+const { UserRepository } = require('../repository');
+
 const container =  createContainer();
 
 container
@@ -38,6 +41,9 @@ container
     })
     .register({
         User: asValue(User)
+    })
+    .register({
+        UserRepository: asClass(UserRepository).singleton()
     })
 
 module.exports = container;
