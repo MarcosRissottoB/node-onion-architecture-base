@@ -3,10 +3,13 @@ const { Schema } = mongoose;
 const { compareSync, hashSync, genSaltSync } = require('bcryptjs');
 
 const UserSchema = new Schema({
-    name: {type: String, required: true},
     username: {type: String, required: true},
+    lastname: {type: String, required: true},
     password: {type: String, required: true},
-    email: {type: String, required: true}
+    email: {type: String, required: true},
+    role: {type: String, required: true},
+    subjet: {type: String, required: true},
+    degree: {type: String, required: true}
 });
 
 UserSchema.methods.toJSON = function() {
