@@ -11,7 +11,7 @@ const Routes = require('../routes');
 const { HomeRoutes } = require('../routes/index.routes');
 
 // Controllers
-const { HomeController } = require('../controllers');
+const { HomeController, UserController } = require('../controllers');
 
 // Services
 const { HomeService, UserService } = require('../services');
@@ -35,7 +35,8 @@ container
         UserService: asClass(UserService).singleton()
     })
     .register({
-        HomeController: asClass(HomeController.bind(HomeController)).singleton()
+        HomeController: asClass(HomeController.bind(HomeController)).singleton(),
+        UserController: asClass(UserController.bind(UserController)).singleton()
     })
     .register({
         HomeRoutes: asFunction(HomeRoutes).singleton()
