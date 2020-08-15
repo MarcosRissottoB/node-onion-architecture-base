@@ -7,9 +7,9 @@ const UserSchema = new Schema({
     lastname: {type: String, required: true},
     password: {type: String, required: true},
     email: {type: String, required: true},
-    role: {type: String, required: true},
-    subjet: {type: String, required: true},
-    degree: {type: String, required: true}
+    role: {type: String},
+    subjet: {type: String},
+    degree: {type: String}
 });
 
 UserSchema.methods.toJSON = function() {
@@ -18,7 +18,7 @@ UserSchema.methods.toJSON = function() {
     return user;
 }
 
-UserSchema.methods.comparePassword = function(password) {
+UserSchema.methods.comparePasswords = function(password) {
     return compareSync(password, this.password) ;
 }
 
