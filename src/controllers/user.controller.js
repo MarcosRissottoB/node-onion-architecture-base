@@ -1,6 +1,6 @@
 
-
 let _userService = null;
+
 class UserController {
     constructor({UserService}) {
         _userService = UserService;
@@ -27,5 +27,6 @@ class UserController {
     async delete() {
         
     }
+}
 
 module.exports = UserController;
