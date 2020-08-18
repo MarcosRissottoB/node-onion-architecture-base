@@ -1,23 +1,15 @@
 {
-  "name": "visualiza-magno",
+  "name": "node-onion-architecture-base",
   "version": "1.0.0",
-  "description": "API Visualiza Magno",
+  "description": "API node-onion-architecture-base",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MartinSobel/visualiza-magno.git"
-  },
   "author": "Marcos Rissotto",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MartinSobel/visualiza-magno/issues"
-  },
-  "homepage": "https://github.com/MartinSobel/visualiza-magno#readme",
   "dependencies": {
     "awilix": "^4.2.6",
     "bcryptjs": "^2.4.3",
